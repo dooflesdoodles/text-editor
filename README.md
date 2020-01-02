@@ -1,5 +1,6 @@
 # Text-Editor
 A simple text-editor gui written in java using the swing library.
+
 Current stage: 3/4.
 
 ## Links
@@ -7,5 +8,6 @@ Current stage: 3/4.
 
 ## Installation
 1. Download the repo.
+
 Inside the repo:
 2. ```java Main```
