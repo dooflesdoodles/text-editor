@@ -7,5 +7,5 @@ Current stage: 3/4.
 
 ## Installation
 1. Download the repo.
-3. Inside the repo:
+Inside the repo:
 2. ```java Main```
