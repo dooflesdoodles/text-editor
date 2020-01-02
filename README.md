@@ -10,4 +10,5 @@ Current stage: 3/4.
 1. Download the repo.
 
 Inside the repo:
+
 2. ```java Main```
