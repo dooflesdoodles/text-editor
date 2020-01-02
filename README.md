@@ -1,5 +1,5 @@
 # Text-Editor
-A really easy text-editor gui written in java using the swing library.
+A simple text-editor gui written in java using the swing library.
 Current stage: 3/4.
 
 ## Links
