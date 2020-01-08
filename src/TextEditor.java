@@ -29,11 +29,11 @@ public class TextEditor extends JFrame {
 
         // Action listeners
         loadMenuItem.addActionListener(actionEvent -> {
-            load(fileSelector.getText());
+		    load(getFileSelectorValue() );
         });
 
         saveMenuItem.addActionListener(actionEvent -> {
-            save(fileSelector.getText(), editorTextArea.getText());
+		    save(fileSelector.getText(), getEditorTextAreaValue() );
         });
 
         exitMenuItem.addActionListener(actionEvent -> {
@@ -41,11 +41,11 @@ public class TextEditor extends JFrame {
         });
 
         saveButton.addActionListener(actionEvent -> {
-            save(fileSelector.getText(), editorTextArea.getText());
+		    save(fileSelector.getText(), getEditorTextAreaValue() );
         });
 
         loadButton.addActionListener(actionEvent -> {
-            load(fileSelector.getText());
+		    load(getFileSelectorValue() );
         });
 
         // Set content-pane & flow layout for the frame
@@ -70,18 +70,26 @@ public class TextEditor extends JFrame {
         getContentPane().add(scrollableTextArea);
 
         // Set Window
-        setSize(593, 280); 
+        setSize(593, 280);
         setResizable(false);
-        setVisible(true); 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close window on 'x' btn
-        setLocationRelativeTo(null); // center window
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
     }
 
-    // Sets text for textArea component
+    // Getter & setter
     public void setEditorTextAreaValue(String editorTextAreaValue) {
         editorTextArea.setText(editorTextAreaValue);
     }
+		
+	public String getEditorTextAreaValue() {
+				return editorTextArea.getText();
+		}
 
+	public String getFileSelectorValue() {
+				return fileSelector.getText();
+		}
+		
     // Load File
     public static String readFileAsString(String fileName) throws IOException {
         return new String(Files.readAllBytes(Paths.get(fileName)));
