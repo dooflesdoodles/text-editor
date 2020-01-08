@@ -70,11 +70,11 @@ public class TextEditor extends JFrame {
         getContentPane().add(scrollableTextArea);
 
         // Set Window
-        setSize(593, 280);
+        setSize(593, 280); 
         setResizable(false);
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        setVisible(true); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close window on 'x' btn
+        setLocationRelativeTo(null); // center window
     }
 
     // Sets text for textArea component
