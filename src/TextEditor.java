@@ -29,11 +29,11 @@ public class TextEditor extends JFrame {
 
         // Action listeners
         loadMenuItem.addActionListener(actionEvent -> {
-		    load(getFileSelectorValue() );
+	    load(getFileSelectorValue() );
         });
 
         saveMenuItem.addActionListener(actionEvent -> {
-		    save(fileSelector.getText(), getEditorTextAreaValue() );
+	    save(fileSelector.getText(), getEditorTextAreaValue() );
         });
 
         exitMenuItem.addActionListener(actionEvent -> {
@@ -41,11 +41,11 @@ public class TextEditor extends JFrame {
         });
 
         saveButton.addActionListener(actionEvent -> {
-		    save(fileSelector.getText(), getEditorTextAreaValue() );
+	    save(fileSelector.getText(), getEditorTextAreaValue() );
         });
 
         loadButton.addActionListener(actionEvent -> {
-		    load(getFileSelectorValue() );
+	    load(getFileSelectorValue() );
         });
 
         // Set content-pane & flow layout for the frame
@@ -82,13 +82,13 @@ public class TextEditor extends JFrame {
         editorTextArea.setText(editorTextAreaValue);
     }
 		
-	public String getEditorTextAreaValue() {
-				return editorTextArea.getText();
-		}
+    public String getEditorTextAreaValue() {
+	return editorTextArea.getText();
+    }
 
-	public String getFileSelectorValue() {
-				return fileSelector.getText();
-		}
+    public String getFileSelectorValue() {
+        return fileSelector.getText();
+    }
 		
     // Load File
     public static String readFileAsString(String fileName) throws IOException {
