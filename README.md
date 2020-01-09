@@ -9,6 +9,7 @@ Current stage: 3/4.
 ## Installation
 Just run the Main.class
 
+## GUI
 ![alt text][logo]
 
 [logo]: https://github.com/dooflesdoodles/text-editor/blob/master/example.png "example"
