@@ -11,4 +11,4 @@ Just run the Main.class
 
 ![alt text][logo]
 
-[logo]: https://https://raw.githubusercontent.com/dooflesdoodles/text-editor/master/example.png "example"
+[logo]: https://github.com/dooflesdoodles/text-editor/blob/master/example.png "example"
