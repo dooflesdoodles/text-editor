@@ -29,11 +29,11 @@ public class TextEditor extends JFrame {
 
         // Action listeners
         loadMenuItem.addActionListener(actionEvent -> {
-	    load(getFileSelectorValue() );
+	    load( getFileSelectorContent() );
         });
 
         saveMenuItem.addActionListener(actionEvent -> {
-	    save(fileSelector.getText(), getEditorTextAreaValue() );
+	    save( fileSelector.getText(), getEditorTextAreaContent() );
         });
 
         exitMenuItem.addActionListener(actionEvent -> {
@@ -41,11 +41,11 @@ public class TextEditor extends JFrame {
         });
 
         saveButton.addActionListener(actionEvent -> {
-	    save(fileSelector.getText(), getEditorTextAreaValue() );
+	    save( fileSelector.getText(), getEditorTextAreaContent() );
         });
 
         loadButton.addActionListener(actionEvent -> {
-	    load(getFileSelectorValue() );
+	    load( getFileSelectorContent() );
         });
 
         // Set content-pane & flow layout for the frame
@@ -78,15 +78,15 @@ public class TextEditor extends JFrame {
     }
 
     // Getter & setter
-    public void setEditorTextAreaValue(String editorTextAreaValue) {
-        editorTextArea.setText(editorTextAreaValue);
+    public void setEditorTextAreaContent(String editorTextAreaContent) {
+        editorTextArea.setText(editorTextAreaContent);
     }
 		
-    public String getEditorTextAreaValue() {
-	return editorTextArea.getText();
+    public String getEditorTextAreaContent() {
+        return editorTextArea.getText();
     }
 
-    public String getFileSelectorValue() {
+    public String getFileSelectorContent() {
         return fileSelector.getText();
     }
 		
@@ -95,19 +95,19 @@ public class TextEditor extends JFrame {
         return new String(Files.readAllBytes(Paths.get(fileName)));
     }
 
-    public void load(String fileSelectorValue){
-        String pathToFile = fileSelectorValue;
+    public void load(String fileSelectorContent){
+        String pathToFile = fileSelectorContent;
         try {
-            setEditorTextAreaValue(readFileAsString(pathToFile));
+            setEditorTextAreaContent(readFileAsString(pathToFile));
             editorTextArea.setCaretPosition(0);
         } catch (IOException e) {
-            System.out.println("Cannot read file: " + e.getMessage());
+            System.out.println( "Cannot read file: " + e.getMessage() );
         }
     }
 
     // Write File
-    public void save(String fileSelectorValue, String editorTextAreaValue){
-        File file = new File(fileSelectorValue);
+    public void save(String fileSelectorContent, String editorTextAreaContent){
+        File file = new File(fileSelectorContent);
         FileWriter writer = null;
         try {
             writer = new FileWriter(file);
@@ -115,7 +115,7 @@ public class TextEditor extends JFrame {
             e.printStackTrace();
         }
         try {
-            writer.write(editorTextAreaValue);
+            writer.write(editorTextAreaContent);
         } catch (IOException e) {
             e.printStackTrace();
         }
