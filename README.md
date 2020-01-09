@@ -8,3 +8,7 @@ Current stage: 3/4.
 
 ## Installation
 Just run the Main.class
+
+![alt text][logo]
+
+[logo]: https://https://raw.githubusercontent.com/dooflesdoodles/text-editor/master/example.png
