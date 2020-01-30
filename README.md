@@ -7,7 +7,7 @@ Current stage: 3/4.
 [https://hyperskill.org/projects/38?goal=7](https://hyperskill.org/projects/38?goal=7)
 
 ## Installation
-Just run the Main.class
+Just download the files, compile the Main.java and run it.
 
 ## GUI
 ![alt text][logo]
